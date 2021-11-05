@@ -1,3 +1,5 @@
+#ifdef __linux__
+
 typedef enum verdict {
     OK,
     WA,
@@ -10,9 +12,11 @@ typedef struct test {
     const char* description;
     unsigned int timeout;
     int (*function)(void);
-    verdict result;
+    verdict verdict;
 } test;
 
 test unit_tests[] = {
 
 };
+
+#endif
