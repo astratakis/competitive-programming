@@ -1,6 +1,7 @@
+#include <iostream>
+
 #ifdef __linux__
 
-#include <iostream>
 #include <unistd.h>
 #include <signal.h>
 #include <assert.h>
@@ -105,14 +106,16 @@ void print_test(test *t, int index) {
 
 int main(int argc, char **argv) {
     #ifndef __linux__
-        printf("[ERROR]: OS not supported.");
-        exit(0);
+        std::cout << "[ERROR]: OS not supported.\n";
+        return 0;
+    #else
+        int length = sizeof(unit_tests) / sizeof(unit_tests[0]);
+
+        for (int i=0; i<length; i++) {
+            execute(& unit_tests[i]);
+            print_test(& unit_tests[i], i);
+        }
     #endif
 
-    int length = sizeof(unit_tests) / sizeof(unit_tests[0]);
-
-    for (int i=0; i<length; i++) {
-        execute(& unit_tests[i]);
-        print_test(& unit_tests[i], i);
-    }
+    return 0;
 }
