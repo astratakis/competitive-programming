@@ -75,7 +75,7 @@ inline const char* verdict_to_string(verdict v) {
     switch (v)
     {
     case OK:
-        return "   OK   ";
+        return "OK";
         break;
     
     case TLE:
