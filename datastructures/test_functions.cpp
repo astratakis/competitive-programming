@@ -8,9 +8,9 @@ int example(void) {
 }
 
 int segmentation_fault_example(void) {
-    char* str = "You make my software turn into hardware";
+    char *str = "You make my software turn into hardware";
 
-    *(str+1) = 'n';
+    str[42] = 'n';
 
     return SUCCESS;
 }

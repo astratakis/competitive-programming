@@ -1,10 +1,12 @@
 #ifdef __linux__
 
-typedef enum verdict {
+#include "test_functions.hpp"
+
+enum verdict {
     OK,
-    WA,
     TLE,
-    RE
+    RE,
+    WA
 };
 
 typedef struct test {
@@ -12,11 +14,14 @@ typedef struct test {
     const char* description;
     unsigned int timeout;
     int (*function)(void);
-    verdict verdict;
+    verdict result;
 } test;
 
 test unit_tests[] = {
-
+    {"Example test", "", 1, example},
+    {"Segmentation fault example", "", 1, segmentation_fault_example},
+    {"Time limit example", "", 1, time_limit_example},
+    {"Wrong answer example", "", 1, wrong_answer_example}
 };
 
 #endif
