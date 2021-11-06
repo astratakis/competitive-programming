@@ -1,4 +1,3 @@
-#ifndef __TEST_FUNCTIONS__
 #define __TEST_FUNCTIONS__
 
-#endif
+int generic_args_test(void);
