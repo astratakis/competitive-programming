@@ -18,7 +18,7 @@ typedef struct test {
 } test;
 
 test unit_tests[] = {
-    
+    {"Sample test", "", 1, sample_test}
 };
 
 #endif

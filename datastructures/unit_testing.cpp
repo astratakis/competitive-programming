@@ -7,7 +7,9 @@
 #include <assert.h>
 #include <sys/wait.h>
 #include <sys/types.h>
+
 #include "unit_testing.hpp"
+#include "test_functions.hpp"
 
 #ifndef _COLORS_
 #define _COLORS_
