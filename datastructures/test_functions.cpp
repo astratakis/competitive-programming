@@ -11,9 +11,7 @@ using namespace std;
 int sample_test(void) {
     vector<int> a(10);
 
-    segment_tree<int> tree;
+    segment_tree<int> tree(a);
 
-    tree.hello();
-
-    return FAILURE;
+    return SUCCESS;
 }

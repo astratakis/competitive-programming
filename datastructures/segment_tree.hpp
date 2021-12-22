@@ -1,7 +1,7 @@
 #ifndef __libraries__
 
-#include <iostream>
-using namespace std;
+    #include <iostream>
+    using namespace std;
 
 #endif
 
@@ -11,11 +11,12 @@ using namespace std;
 #define __generic__ template <typename T>
 
 template <typename T> class segment_tree {
+    
     public:
-        void hello(void);
+        segment_tree(vector<T> __list);
 };
 
-__generic__ void segment_tree<T>::hello(void) {
+__generic__ segment_tree<T>::segment_tree(vector<T> __list) {
     cout << "asdfygiaudysgf";
 }
 
